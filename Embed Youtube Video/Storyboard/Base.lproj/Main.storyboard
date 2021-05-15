@@ -88,11 +88,28 @@
                         <outlet property="enterIdTextField" destination="BJ8-8R-Yhc" id="N67-OK-62i"/>
                         <outlet property="getButton" destination="mLN-cW-rZ8" id="eIk-Yt-nhF"/>
                         <outlet property="segmentedControl" destination="bjA-mK-PZA" id="na4-KC-aO6"/>
+                        <segue destination="1YO-tn-qcV" kind="show" identifier="channelVideoListVC" id="uN5-2R-39j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+        </scene>
+        <!--Channel Video List View Controller-->
+        <scene sceneID="faP-QD-kaZ">
+            <objects>
+                <viewController id="1YO-tn-qcV" customClass="ChannelVideoListViewController" customModule="Embed_Youtube_Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOK-cl-xp6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SwW-dt-c5R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BX3-M7-dbR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaC-Ao-NGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oe-AH-jwb">

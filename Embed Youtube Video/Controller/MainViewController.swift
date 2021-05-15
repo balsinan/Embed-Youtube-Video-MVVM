@@ -62,10 +62,18 @@ class MainViewController: UIViewController {
             }
         case .Channel:
             if enterIdTextField.text != "" && apiKeyTextField.text != ""{
-                //video detail vc
+                performSegue(withIdentifier: "channelVideoListVC", sender: nil)
             } else {
                 self.showAlert(title: "Info", message: "Please enter api key & channel id")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "channelVideoListVC"{
+            let destinationVC = segue.destination as! ChannelVideoListViewController
+            destinationVC.apiKey = apiKeyTextField.text!
+            destinationVC.channelId = enterIdTextField.text!
         }
     }
 }

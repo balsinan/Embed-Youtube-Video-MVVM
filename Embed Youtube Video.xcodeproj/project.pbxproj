@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22B5EA268FEAB7DECBC3D09B /* Pods_Embed_Youtube_Video.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F648B7113BD2FB5B723698F6 /* Pods_Embed_Youtube_Video.framework */; };
+		F7098ACC26505299000D6E8E /* ChannelVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7098ACB26505299000D6E8E /* ChannelVideoListViewController.swift */; };
 		F70D6431264FE2400052FE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D6430264FE2400052FE5C /* AppDelegate.swift */; };
 		F70D6433264FE2400052FE5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D6432264FE2400052FE5C /* SceneDelegate.swift */; };
 		F70D6438264FE2400052FE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70D6436264FE2400052FE5C /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		282D456B827A504E153F1F1D /* Pods-Embed Youtube Video.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embed Youtube Video.release.xcconfig"; path = "Target Support Files/Pods-Embed Youtube Video/Pods-Embed Youtube Video.release.xcconfig"; sourceTree = "<group>"; };
 		D348BA078010B64480FD3F86 /* Pods-Embed Youtube Video.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embed Youtube Video.debug.xcconfig"; path = "Target Support Files/Pods-Embed Youtube Video/Pods-Embed Youtube Video.debug.xcconfig"; sourceTree = "<group>"; };
 		F648B7113BD2FB5B723698F6 /* Pods_Embed_Youtube_Video.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Embed_Youtube_Video.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7098ACB26505299000D6E8E /* ChannelVideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVideoListViewController.swift; sourceTree = "<group>"; };
 		F70D642D264FE2400052FE5C /* Embed Youtube Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Embed Youtube Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D6430264FE2400052FE5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F70D6432264FE2400052FE5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F76C154D264FE3C3004570E4 /* MainViewController.swift */,
+				F7098ACB26505299000D6E8E /* ChannelVideoListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				F70D6431264FE2400052FE5C /* AppDelegate.swift in Sources */,
 				F70D6433264FE2400052FE5C /* SceneDelegate.swift in Sources */,
 				F76C154E264FE3C3004570E4 /* MainViewController.swift in Sources */,
+				F7098ACC26505299000D6E8E /* ChannelVideoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
