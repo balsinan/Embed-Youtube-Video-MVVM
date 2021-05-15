@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9aA-ac-Guz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Embed_Youtube_Video" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bjA-mK-PZA">
+                                <rect key="frame" x="40" y="330.5" width="334" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="kYO-wu-Kw6"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Play Video"/>
+                                    <segment title="Channel List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeSegmented:" destination="BYZ-38-t0r" eventType="valueChanged" id="Okr-AC-yv8"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Api Key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uwp-Gc-GdC">
+                                <rect key="frame" x="40" y="425.5" width="334" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="TAU-kk-JD6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Video Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJ8-8R-Yhc">
+                                <rect key="frame" x="40" y="510.5" width="334" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="yZV-pv-0Y9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLN-cW-rZ8">
+                                <rect key="frame" x="90" y="605.5" width="234" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ZUa-m2-Kuo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Get Videos">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceK-m1-fu5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BJ8-8R-Yhc" firstAttribute="top" secondItem="Uwp-Gc-GdC" secondAttribute="bottom" constant="40" id="4tZ-8M-fAr"/>
+                            <constraint firstItem="mLN-cW-rZ8" firstAttribute="top" secondItem="BJ8-8R-Yhc" secondAttribute="bottom" constant="50" id="C0S-Kf-pAE"/>
+                            <constraint firstItem="Uwp-Gc-GdC" firstAttribute="top" secondItem="bjA-mK-PZA" secondAttribute="bottom" constant="60" id="EaF-ju-MMy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJ8-8R-Yhc" secondAttribute="trailing" constant="40" id="G1x-RE-DfJ"/>
+                            <constraint firstItem="bjA-mK-PZA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GDA-lC-4rU"/>
+                            <constraint firstItem="mLN-cW-rZ8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MOJ-Jc-Bkz"/>
+                            <constraint firstItem="Uwp-Gc-GdC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mjm-qQ-UTO"/>
+                            <constraint firstItem="BJ8-8R-Yhc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="T6q-JR-Nbk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uwp-Gc-GdC" secondAttribute="trailing" constant="40" id="W9X-MG-EgR"/>
+                            <constraint firstItem="Uwp-Gc-GdC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="jbZ-Ok-MJb"/>
+                            <constraint firstItem="mLN-cW-rZ8" firstAttribute="width" secondItem="BJ8-8R-Yhc" secondAttribute="width" multiplier="0.7" id="k1s-je-V4X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bjA-mK-PZA" secondAttribute="trailing" constant="40" id="lxv-Y0-5UN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qgx-1N-2Oh"/>
+                    <connections>
+                        <outlet property="apiKeyTextField" destination="Uwp-Gc-GdC" id="0uG-V2-FVx"/>
+                        <outlet property="enterIdTextField" destination="BJ8-8R-Yhc" id="N67-OK-62i"/>
+                        <outlet property="getButton" destination="mLN-cW-rZ8" id="eIk-Yt-nhF"/>
+                        <outlet property="segmentedControl" destination="bjA-mK-PZA" id="na4-KC-aO6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7oe-AH-jwb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9aA-ac-Guz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b1Y-dP-Qji">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="x9g-TQ-Rm0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8M3-Il-txd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
