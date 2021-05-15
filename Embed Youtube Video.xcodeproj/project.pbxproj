@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22B5EA268FEAB7DECBC3D09B /* Pods_Embed_Youtube_Video.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F648B7113BD2FB5B723698F6 /* Pods_Embed_Youtube_Video.framework */; };
 		F7098ACC26505299000D6E8E /* ChannelVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7098ACB26505299000D6E8E /* ChannelVideoListViewController.swift */; };
+		F7098ACF26505573000D6E8E /* VideoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7098ACE26505573000D6E8E /* VideoListTableViewCell.swift */; };
 		F70D6431264FE2400052FE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D6430264FE2400052FE5C /* AppDelegate.swift */; };
 		F70D6433264FE2400052FE5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70D6432264FE2400052FE5C /* SceneDelegate.swift */; };
 		F70D6438264FE2400052FE5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70D6436264FE2400052FE5C /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		D348BA078010B64480FD3F86 /* Pods-Embed Youtube Video.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embed Youtube Video.debug.xcconfig"; path = "Target Support Files/Pods-Embed Youtube Video/Pods-Embed Youtube Video.debug.xcconfig"; sourceTree = "<group>"; };
 		F648B7113BD2FB5B723698F6 /* Pods_Embed_Youtube_Video.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Embed_Youtube_Video.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7098ACB26505299000D6E8E /* ChannelVideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVideoListViewController.swift; sourceTree = "<group>"; };
+		F7098ACE26505573000D6E8E /* VideoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListTableViewCell.swift; sourceTree = "<group>"; };
 		F70D642D264FE2400052FE5C /* Embed Youtube Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Embed Youtube Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70D6430264FE2400052FE5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F70D6432264FE2400052FE5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7098ACD26505558000D6E8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7098ACE26505573000D6E8E /* VideoListTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F70D6424264FE2400052FE5C = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		F70D642F264FE2400052FE5C /* Embed Youtube Video */ = {
 			isa = PBXGroup;
 			children = (
+				F7098ACD26505558000D6E8E /* View */,
 				F76C154F264FE9FA004570E4 /* Extensions */,
 				F76C1552264FEB1F004570E4 /* Controller */,
 				F76C1553264FEB2D004570E4 /* Storyboard */,
@@ -236,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F76C1551264FEA24004570E4 /* UIViewController+Extension.swift in Sources */,
+				F7098ACF26505573000D6E8E /* VideoListTableViewCell.swift in Sources */,
 				F70D6431264FE2400052FE5C /* AppDelegate.swift in Sources */,
 				F70D6433264FE2400052FE5C /* SceneDelegate.swift in Sources */,
 				F76C154E264FE3C3004570E4 /* MainViewController.swift in Sources */,
