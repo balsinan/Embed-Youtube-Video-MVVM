@@ -58,6 +58,6 @@ extension ChannelVideoListViewController : UITableViewDelegate{
         return 250
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        //self.openVideo(id: videoArray[indexPath.row].videoId)
     }
 }

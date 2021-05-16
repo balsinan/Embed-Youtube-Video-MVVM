@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
         switch segmentIndex {
         case .Video:
             if enterIdTextField.text != "" && apiKeyTextField.text != ""{
-                //open video
+                self.openVideo(id: enterIdTextField.text!)
             } else {
                 self.showAlert(title: "Info", message: "Please enter api key & video id")
             }
