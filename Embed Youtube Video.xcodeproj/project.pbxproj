@@ -18,6 +18,7 @@
 		F76C154E264FE3C3004570E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C154D264FE3C3004570E4 /* MainViewController.swift */; };
 		F76C1551264FEA24004570E4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76C1550264FEA24004570E4 /* UIViewController+Extension.swift */; };
 		F7A48F19265182DC00850CED /* YoutubeVideoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A48F18265182DC00850CED /* YoutubeVideoObject.swift */; };
+		F7B0AFF026518FAC00ACFB6C /* AVPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0AFEF26518FAC00ACFB6C /* AVPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F76C154D264FE3C3004570E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F76C1550264FEA24004570E4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F7A48F18265182DC00850CED /* YoutubeVideoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeVideoObject.swift; sourceTree = "<group>"; };
+		F7B0AFEF26518FAC00ACFB6C /* AVPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 		F70D642F264FE2400052FE5C /* Embed Youtube Video */ = {
 			isa = PBXGroup;
 			children = (
-				F76C154F264FE9FA004570E4 /* Extensions */,
+				F7B0AFF12651902500ACFB6C /* SupportingFiles */,
 				F7A48F17265182C400850CED /* Model */,
 				F7098ACD26505558000D6E8E /* View */,
 				F76C1552264FEB1F004570E4 /* Controller */,
@@ -141,6 +143,23 @@
 				F7A48F18265182DC00850CED /* YoutubeVideoObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F7B0AFEE26518F9600ACFB6C /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F7B0AFEF26518FAC00ACFB6C /* AVPlayerManager.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		F7B0AFF12651902500ACFB6C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F76C154F264FE9FA004570E4 /* Extensions */,
+				F7B0AFEE26518F9600ACFB6C /* VideoPlayer */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +283,7 @@
 				F70D6433264FE2400052FE5C /* SceneDelegate.swift in Sources */,
 				F76C154E264FE3C3004570E4 /* MainViewController.swift in Sources */,
 				F7098ACC26505299000D6E8E /* ChannelVideoListViewController.swift in Sources */,
+				F7B0AFF026518FAC00ACFB6C /* AVPlayerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,15 @@ class ChannelVideoListViewController: UIViewController {
         tableView.delegate = self
         tableView.frame = view.bounds
         
+        setupNavigationBar()
         
+    }
+    
+    func setupNavigationBar(){
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
 }

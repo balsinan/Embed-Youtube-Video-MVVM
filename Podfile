@@ -7,6 +7,7 @@ target 'Embed Youtube Video' do
 
 pod 'Alamofire', '~> 5.1'
 pod 'KRProgressHUD'
+pod "XCDYouTubeKit", "~> 2.14"
 
   # Pods for Embed Youtube Video
 
