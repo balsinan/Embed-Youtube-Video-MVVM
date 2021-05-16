@@ -27,9 +27,10 @@ class ChannelVideoListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.frame = view.bounds
+        
+        
     }
     
-
 }
 
 extension ChannelVideoListViewController : UITableViewDataSource{
@@ -45,7 +46,9 @@ extension ChannelVideoListViewController : UITableViewDataSource{
 }
 
 extension ChannelVideoListViewController : UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }

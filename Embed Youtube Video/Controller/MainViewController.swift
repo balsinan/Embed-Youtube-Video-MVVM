@@ -27,7 +27,6 @@ class MainViewController: UIViewController {
         setupNavigationBar()
     }
     
-
     func setupNavigationBar(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "Helvetica-Bold", size: 25)!]

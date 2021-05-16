@@ -21,12 +21,16 @@ class VideoListTableViewCell: UITableViewCell {
     private let videoTitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
+        label.font = UIFont(name: "Avenir-Medium", size: 15)
         return label
     }()
     
     private let durationLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
+        label.font = UIFont(name: "Avenir-Heavy", size: 17)
+        label.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        label.textAlignment = .center
         return label
     }()
     
@@ -36,6 +40,7 @@ class VideoListTableViewCell: UITableViewCell {
         contentView.addSubview(videoTitleLabel)
         contentView.addSubview(durationLabel)
         contentView.clipsToBounds = true
+        
     }
     
     func configureCell(videoObject : YoutubeVideoObject){
@@ -53,6 +58,23 @@ class VideoListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        self.contentView.backgroundColor = .black
+        videoImage.frame = CGRect(x: 0,
+                                  y: 0,
+                                  width: self.frame.size.width,
+                                  height: 190)
+        videoTitleLabel.frame = CGRect(x: 15,
+                                       y: videoImage.frame.maxY + 10,
+                                       width: self.frame.size.width - 30,
+                                       height: 40)
+        durationLabel.frame = CGRect(x: self.frame.size.width - 70,
+                                     y: videoImage.frame.maxY - 40,
+                                     width: 60,
+                                     height: 30)
+        
+    }
     
 }
