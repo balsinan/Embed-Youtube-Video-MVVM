@@ -38,8 +38,21 @@ class VideoListTableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
     }
     
+    func configureCell(videoObject : YoutubeVideoObject){
+        self.videoTitleLabel.text = videoObject.title
+        self.durationLabel.text = videoObject.duration
+        let url = URL(string:videoObject.imageUrl)
+        self.imageView?.image = nil
+        DispatchQueue.main.async() { [weak self] in
+            let data = try? Data(contentsOf: url!)
+            self!.videoImage.image = UIImage(data: data!)
+         }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
     
 }

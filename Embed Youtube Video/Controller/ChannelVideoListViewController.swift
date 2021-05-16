@@ -12,6 +12,8 @@ class ChannelVideoListViewController: UIViewController {
     var apiKey = ""
     var channelId = ""
     
+    var videoArray : [YoutubeVideoObject] = []
+    
     private let tableView : UITableView = {
         let table = UITableView()
         table.register(VideoListTableViewCell.self, forCellReuseIdentifier: VideoListTableViewCell.identifier)
@@ -32,11 +34,12 @@ class ChannelVideoListViewController: UIViewController {
 
 extension ChannelVideoListViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return videoArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: VideoListTableViewCell.identifier, for: indexPath) as! VideoListTableViewCell
+        cell.configureCell(videoObject : videoArray[indexPath.row])
         return cell
     }
 }
