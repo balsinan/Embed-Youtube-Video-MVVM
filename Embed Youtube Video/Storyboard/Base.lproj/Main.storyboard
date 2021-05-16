@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="75.669642857142847"/>
+            <point key="canvasLocation" x="820" y="76"/>
         </scene>
         <!--Channel Video List View Controller-->
         <scene sceneID="faP-QD-kaZ">
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaC-Ao-NGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1591" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oe-AH-jwb">
