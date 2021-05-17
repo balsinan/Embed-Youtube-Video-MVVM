@@ -10,7 +10,6 @@ import Alamofire
 
 let YoutubePlaylistApi = "https://www.googleapis.com/youtube/v3/playlistItems"
 
-
 class YoutubeApi{
     static let sharedInstance = YoutubeApi()
     public typealias onCompleteVideoHandler = (([YoutubeVideoObject]?,AFError?)->())
