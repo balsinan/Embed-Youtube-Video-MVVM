@@ -38,7 +38,7 @@ class ChannelVideoListViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController?.navigationBar.prefersLargeTitles = false
     }
-    
+   
 }
 
 extension ChannelVideoListViewController : UITableViewDataSource{
