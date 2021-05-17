@@ -27,8 +27,10 @@ class ChannelVideoListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.frame = view.bounds
+    
         
         setupNavigationBar()
+        fetchVideoList()
         
     }
     
@@ -38,7 +40,19 @@ class ChannelVideoListViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController?.navigationBar.prefersLargeTitles = false
     }
-   
+    
+    func fetchVideoList(){
+        YoutubeApi.sharedInstance.fetchChannelVideoList(channelId: channelId, apiKey: apiKey) { videoArray, error in
+            if let error = error{
+                self.showAlert(title: "Error", message: error.localizedDescription)
+            }else{
+                if let videos : [YoutubeVideoObject] = videoArray{
+                    self.videoArray = videos
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension ChannelVideoListViewController : UITableViewDataSource{
