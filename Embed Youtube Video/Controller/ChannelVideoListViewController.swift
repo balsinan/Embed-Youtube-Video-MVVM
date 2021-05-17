@@ -28,7 +28,6 @@ class ChannelVideoListViewController: UIViewController {
         tableView.delegate = self
         tableView.frame = view.bounds
     
-        
         setupNavigationBar()
         fetchVideoList()
         
@@ -42,14 +41,27 @@ class ChannelVideoListViewController: UIViewController {
     }
     
     func fetchVideoList(){
-        YoutubeApi.sharedInstance.fetchChannelVideoList(channelId: channelId, apiKey: apiKey) { videoArray, error in
+        YoutubeApi.sharedInstance.fetchChannelVideoList(channelId: channelId, apiKey: apiKey) { objectArray, error in
             if let error = error{
                 self.showAlert(title: "Error", message: error.localizedDescription)
             }else{
-                if let videos : [YoutubeVideoObject] = videoArray{
+                if let videos : [YoutubeVideoObject] = objectArray{
                     self.videoArray = videos
-                    self.tableView.reloadData()
+                    
+                    for video in videos{
+                        self.fetchVideoDuration(videoId: video.videoId, apiKey: self.apiKey, videobject: video)
+                    }
                 }
+            }
+        }
+    }
+    
+    func fetchVideoDuration(videoId: String, apiKey: String, videobject: YoutubeVideoObject){
+        YoutubeApi.sharedInstance.fetchVideoDuration(videoId: videoId, apiKey: apiKey, videoObject: videobject) { success, error in
+            if success{
+                self.tableView.reloadData()
+            }else{
+                self.showAlert(title: "Error", message: error?.localizedDescription ?? "")
             }
         }
     }
@@ -72,6 +84,6 @@ extension ChannelVideoListViewController : UITableViewDelegate{
         return 250
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //self.openVideo(id: videoArray[indexPath.row].videoId)
+        self.openVideo(id: videoArray[indexPath.row].videoId)
     }
 }

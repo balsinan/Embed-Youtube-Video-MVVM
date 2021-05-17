@@ -50,7 +50,7 @@ class MainViewController: UIViewController {
             enterIdTextField.text = ""
             getButton.setTitle("Get Channel List", for: .normal)
         default:
-            break;
+            break
         }
     }
     
