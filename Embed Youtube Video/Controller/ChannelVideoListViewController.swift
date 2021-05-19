@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KRProgressHUD
 
 class ChannelVideoListViewController: UIViewController {
     
@@ -41,9 +42,11 @@ class ChannelVideoListViewController: UIViewController {
     }
     
     func fetchVideoList(){
+        KRProgressHUD.show()
         YoutubeApi.sharedInstance.fetchChannelVideoList(channelId: channelId, apiKey: apiKey) { objectArray, error in
             if let error = error{
                 self.showAlert(title: "Error", message: error.localizedDescription)
+                KRProgressHUD.dismiss()
             }else{
                 if let videos : [YoutubeVideoObject] = objectArray{
                     self.videoArray = videos
@@ -60,8 +63,10 @@ class ChannelVideoListViewController: UIViewController {
         YoutubeApi.sharedInstance.fetchVideoDuration(videoId: videoId, apiKey: apiKey, videoObject: videobject) { success, error in
             if success{
                 self.tableView.reloadData()
+                KRProgressHUD.dismiss()
             }else{
                 self.showAlert(title: "Error", message: error?.localizedDescription ?? "")
+                KRProgressHUD.dismiss()
             }
         }
     }
