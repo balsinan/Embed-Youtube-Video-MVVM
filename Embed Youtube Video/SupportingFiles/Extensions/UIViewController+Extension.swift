@@ -16,6 +16,7 @@ extension UIViewController{
     XCDYouTubeClient.default().getVideoWithIdentifier(id) { (video, error) in
         
         guard error == nil else {
+            self.showAlert(title: "Error", message: error?.localizedDescription ?? "")
                 return
         }
         if let video = video{
