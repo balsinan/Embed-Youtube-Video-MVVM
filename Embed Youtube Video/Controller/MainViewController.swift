@@ -23,7 +23,8 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +33,14 @@ class MainViewController: UIViewController {
     
     func setupNavigationBar(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont(name: "Helvetica-Bold", size: 25)!]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont(name: "Helvetica-Bold", size: 25)!]
         self.navigationController?.navigationBar.topItem?.title = "Embed Youtube Videos Easily"
+    }
+    
+    func setupLabel(){
+        segmentedControl.setTitleTextAttributes( [NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        enterIdTextField.attributedPlaceholder = NSAttributedString(string: "Enter Video Id", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        apiKeyTextField.attributedPlaceholder = NSAttributedString(string: "Enter Api Key", attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
     }
 
     @IBAction func changeSegmented(_ sender: UISegmentedControl) {

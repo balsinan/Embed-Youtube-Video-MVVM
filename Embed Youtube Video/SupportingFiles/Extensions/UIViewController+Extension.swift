@@ -17,7 +17,7 @@ extension UIViewController{
         
         guard error == nil else {
             self.showAlert(title: "Error", message: error?.localizedDescription ?? "")
-                return
+            return
         }
         if let video = video{
             AVPlayerViewControllerManager.shared.lowQualityMode = false
@@ -41,3 +41,5 @@ extension UIViewController{
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+

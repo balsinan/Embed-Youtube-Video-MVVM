@@ -25,10 +25,10 @@ class ChannelVideoListViewController: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(tableView)
+        tableView.backgroundColor = #colorLiteral(red: 0.04705882353, green: 0.06274509804, blue: 0.09803921569, alpha: 1)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.frame = view.bounds
-    
         setupNavigationBar()
         fetchVideoList()
         
@@ -37,6 +37,7 @@ class ChannelVideoListViewController: UIViewController {
     func setupNavigationBar(){
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         self.navigationController?.navigationBar.prefersLargeTitles = false
     }

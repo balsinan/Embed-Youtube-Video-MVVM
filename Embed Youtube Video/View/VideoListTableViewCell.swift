@@ -61,7 +61,7 @@ class VideoListTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.contentView.backgroundColor = .black
+        self.contentView.backgroundColor = #colorLiteral(red: 0.04705882353, green: 0.06274509804, blue: 0.09803921569, alpha: 1)
         videoImage.frame = CGRect(x: 0,
                                   y: 0,
                                   width: self.frame.size.width,

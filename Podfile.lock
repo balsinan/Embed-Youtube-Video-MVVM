@@ -8,7 +8,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.1)
   - KRProgressHUD
-  - XCDYouTubeKit (~> 2.14)
+  - XCDYouTubeKit (~> 2.15)
 
 SPEC REPOS:
   trunk:
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
   XCDYouTubeKit: b120aced3d8638ffb570c5450cddb5a1dac448c7
 
-PODFILE CHECKSUM: f0f69335b97c326a259080579b89c504941e87fc
+PODFILE CHECKSUM: 9bdbab862a85de4fb565fb005dadc2f6aeb1d33f
 
 COCOAPODS: 1.10.1
