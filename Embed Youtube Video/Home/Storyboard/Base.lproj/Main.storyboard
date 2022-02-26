@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9aA-ac-Guz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9aA-ac-Guz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Embed_Youtube_Video" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Embed_Youtube_Video" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,28 +135,22 @@
                         <outlet property="enterIdTextField" destination="BJ8-8R-Yhc" id="N67-OK-62i"/>
                         <outlet property="getButton" destination="mLN-cW-rZ8" id="eIk-Yt-nhF"/>
                         <outlet property="segmentedControl" destination="bjA-mK-PZA" id="na4-KC-aO6"/>
-                        <segue destination="1YO-tn-qcV" kind="show" identifier="channelVideoListVC" id="uN5-2R-39j"/>
+                        <segue destination="vHz-VN-mBP" kind="show" identifier="channelVideoListVC" id="um6-H1-eax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="76"/>
         </scene>
-        <!--Channel Video List View Controller-->
-        <scene sceneID="faP-QD-kaZ">
+        <!--ChannelList-->
+        <scene sceneID="EhF-RT-Fq1">
             <objects>
-                <viewController id="1YO-tn-qcV" customClass="ChannelVideoListViewController" customModule="Embed_Youtube_Video" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NOK-cl-xp6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="SwW-dt-c5R"/>
-                        <color key="backgroundColor" red="0.047058823529411764" green="0.062745098039215685" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BX3-M7-dbR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BaC-Ao-NGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ChannelList" id="vHz-VN-mBP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MJk-SE-y3e"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mQ-gM-l4V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="76"/>
+            <point key="canvasLocation" x="1419" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7oe-AH-jwb">

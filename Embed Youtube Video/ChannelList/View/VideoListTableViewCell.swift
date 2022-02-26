@@ -43,7 +43,7 @@ class VideoListTableViewCell: UITableViewCell {
         
     }
     
-    func configureCell(videoObject : YoutubeVideoObject){
+    func configureCell(videoObject : ChannelViewModel){
         self.videoTitleLabel.text = videoObject.title
         self.durationLabel.text = videoObject.duration
         let url = URL(string:videoObject.imageUrl)
